@@ -7,10 +7,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pokedex</title>
 
+  <!-- styles -->
   <link rel="stylesheet" href="styles/main.css">
+
+  <!-- fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Raleway&display=swap" rel="stylesheet">
+
   <!-- favicon -->
   <link rel="icon" type="image/png" href="./favicon16x16.png" sizes="16x16">
   <link rel="icon" type="image/png" href="./favicon32x32.png" sizes="32x32">
@@ -22,28 +26,19 @@
 
 <body>
   <main class="wrapper">
-    <div class="pokedex">
-      <form class="form">
-        <input type="search" class="form-search">
-        <button type="button" class="form-btn"></button>
-      </form>
+    <div class="container">
 
-      <div class="pokedex-holder">
-        <div class="pokedex-img"></div>
-      </div>
+      <div class="pokedex">
+        <form class="form">
+          <label class="form-label">
+            <span class="form-txt">Schreiben Sie die Nummber, bitte</span>
+            <input type="search" class="form-search" placeholder="von 1 bis 650">
+          </label>
+          <button type="button" class="form-btn"></button>
+        </form>
 
-      <!-- <div class="pokedex-items _left">
-        <i class="pokedex-info"></i>
+        <div class="pokedex-holder"></div>
       </div>
-      <div class="pokedex-items _right">
-        <i class="pokedex-info"></i>
-      </div>
-      <div class="pokedex-items _top">
-        <i class="pokedex-info"></i>
-      </div>
-      <div class="pokedex-items _bottom">
-        <i class="pokedex-info"></i>
-      </div> -->
     </div>
   </main>
 
