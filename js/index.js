@@ -1,8 +1,20 @@
 let url = "https://pokeapi.co/api/v2/pokemon/";
-// let img = document.querySelector(".pokedex-img");
 let holder = document.querySelector(".pokedex-holder");
 let searchControl = document.querySelector(".form-search");
 let searchBtn = document.querySelector(".form-btn");
+
+document.addEventListener("keydown", function (e) {
+  if (e.code === "Enter") {
+    let flag =
+      document.querySelector(".pokedex-img") &&
+      document.querySelector(".pokedex-name") &&
+      document.querySelector(".pokedex-id")
+        ? true
+        : false;
+
+    callPokemon(id, appendPokemon, flag);
+  }
+});
 
 searchBtn.addEventListener("click", function () {
   let id = searchControl.value;
@@ -14,6 +26,8 @@ searchBtn.addEventListener("click", function () {
       : false;
 
   callPokemon(id, appendPokemon, flag);
+  searchControl.value = "";
+  searchControl.focus();
 });
 
 async function callPokemon(id, appendPokemon, status) {
